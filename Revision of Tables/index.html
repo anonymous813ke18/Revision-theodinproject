@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>
+        <caption>Simple Table</caption>
+        <thead>
+            <tr>
+                <th colspan="3" scope="colgroup">Heading of Colgoup</th>
+            </tr>
+            <tr>
+                <th scope="col">Artist</th>
+                <th scope="col">Location</th>
+                <th scope="col">Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Xyz</td>
+                <td>Abc</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Abc</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Xyz</td>
+                <td>Abc</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Xyz</td>
+                <td>Abc</td>
+                <td>$10</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Sum</td>
+                <td>$40</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

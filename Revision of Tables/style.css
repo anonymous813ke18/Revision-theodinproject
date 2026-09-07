@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+table {
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 10px;
+}
+
+th {
+    background-color: #374d7c;
+    color: white;
+}
+
+td {
+    background-color: #fdf289;
+}
+
+td, th {
+    padding: 10px 20px;
+}
+
+tfoot td {
+    background-color: #31806f;
+    color: white;
+    text-align: center;
+}
