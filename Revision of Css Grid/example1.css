@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    width: 400px;
+}
+
+.grid-item-1 {
+    background-color: lightcoral;
+}
+
+.grid-item-2 {
+    background-color: lightgreen;
+}
+
+.grid-item-3 {
+    background-color: skyblue;
+}
+
+.grid-item-4 {
+    background-color: lightcyan;
+}
+
+.grid-item-5 {
+    background-color: lightgoldenrodyellow;
+}
+
+.grid-item-6 {
+    background-color: lightpink;
+}
+
+.grid-item-7 {
+    background-color: lightseagreen;
+}
+
+.grid-item-8 {
+    background-color: lightgray;
+}
