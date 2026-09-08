@@ -6,8 +6,11 @@
 .grid-container {
     font-size: 40px;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(2, 1fr);
     width: 400px;
+    height: 400px;
+    justify-items: center;
+    align-items: center;
 }
 
 .grid-item-1 {
@@ -20,6 +23,8 @@
 
 .grid-item-3 {
     background-color: skyblue;
+    justify-self: end;
+    align-self: start;
 }
 
 .grid-item-4 {
@@ -28,10 +33,13 @@
 
 .grid-item-5 {
     background-color: lightgoldenrodyellow;
+    /* grid-row: 3 / span 2; */
 }
 
 .grid-item-6 {
     background-color: lightpink;
+    /* grid-row: 1 / 2;
+    grid-column: 2 / 3; */
 }
 
 .grid-item-7 {
