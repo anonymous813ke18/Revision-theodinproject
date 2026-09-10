@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="sidebar">
+        <img src="./images/halie-west-25xggax4bSA-unsplash.jpg" alt="Natural Backgroud">
+        <div class="logo-section">
+            <img src="./images/odin-lined.png" alt="logo">
+            <h1>HAMMAD</h1>
+        </div>
+        <div class="credits">
+            <p>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank" rel="noopener noreferrer">Halie West</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="top-section">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up to get started.</p>
+            <p>You <i>know</i> you want to.</p>
+        </div>
+        <div class="form-section">
+            <div class="form-row heading">
+                <h1>Let's do this!</h1>
+            </div>
+            <form action="#" id="myForm">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Hammad">
+                    </div>
+
+                    <div class="form-column">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Khan">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required placeholder="your@example.com">
+                    </div>
+
+                    <div class="form-column">
+                        <label for="number">PHONE NUMBER</label>
+                        <input type="text" id="number" name="number" required placeholder="8424882252" pattern="[6-9]\d{9}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required placeholder="A-Z | a-z | 0-9 | @$#_-" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#_\-]).+" minlength="8" maxlength="15">
+                    </div>
+
+                    <div class="form-column">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="A-Z | a-z | 0-9 | @$#_-" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#_\-]).+" minlength="8" maxlength="15">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bottom-section">
+            <button type="submit" form="myForm">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </section>
+</body>
+</html>
