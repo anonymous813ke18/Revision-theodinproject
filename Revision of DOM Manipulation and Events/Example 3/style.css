@@ -1,0 +1,13 @@
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    transition: 150ms ease-in-out;
+}
+
+.blue-bg {
+    background-color: skyblue;
+    transition: 150ms ease-in-out;
+}
+
