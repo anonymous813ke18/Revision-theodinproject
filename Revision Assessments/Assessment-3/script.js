@@ -1,3 +1,13 @@
+const buttons = document.querySelectorAll('button');
+console.log(buttons)
+buttons.forEach((button) => {
+    button.addEventListener ('click', () => {
+        let humanChoice = button.textContent.toLowerCase();
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice)
+        // alert('listener added')
+    })
+})
 let humanScore=0, computerScore=0;
 
 function getComputerChoice () {
@@ -11,10 +21,10 @@ function getComputerChoice () {
     }
 }
 
-function getHumanChoice () {
-    let choice = prompt("Please enter you choice (Rock, Paper, or Scissors).");
-    return choice;
-}
+// function getHumanChoice () {
+//     let choice = prompt("Please enter you choice (Rock, Paper, or Scissors).");
+//     return choice;
+// }
 
 function playRound (humanChoice, computerChoice) {
     if(humanChoice == computerChoice) {
@@ -42,23 +52,23 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-function playGame () {
-    let humanChoice, computerChoice;
+// function playGame () {
+//     let humanChoice, computerChoice;
 
-    for (let i = 0; i < 5; i++) {
-        humanChoice = getHumanChoice().toLowerCase();
-        computerChoice = getComputerChoice();
+//     for (let i = 0; i < 5; i++) {
+//         humanChoice = getHumanChoice().toLowerCase();
+//         computerChoice = getComputerChoice();
 
-        playRound(humanChoice, computerChoice);
-    }
+//         playRound(humanChoice, computerChoice);
+//     }
 
-    if (computerScore > humanScore) {
-        console.log('Computer wins the Game!');
-    } else if (computerScore < humanScore) {
-        console.log('Human wins the Game!');
-    } else {
-        console.log('The game is a tie!')
-    }
-}
+//     if (computerScore > humanScore) {
+//         console.log('Computer wins the Game!');
+//     } else if (computerScore < humanScore) {
+//         console.log('Human wins the Game!');
+//     } else {
+//         console.log('The game is a tie!')
+//     }
+// }
 
-playGame();
+// playGame();
