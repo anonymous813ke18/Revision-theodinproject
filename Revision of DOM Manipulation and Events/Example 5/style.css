@@ -1,0 +1,13 @@
+.deleteBtn {
+    margin-left: 10px;
+}
+
+ul {
+    width: 200px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
