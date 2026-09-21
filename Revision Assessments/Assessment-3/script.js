@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll('button');
+const scoreDisplay = document.querySelector(".score-display");
 console.log(buttons)
 buttons.forEach((button) => {
     button.addEventListener ('click', () => {
@@ -28,27 +29,31 @@ function getComputerChoice () {
 
 function playRound (humanChoice, computerChoice) {
     if(humanChoice == computerChoice) {
-        console.log(`It's a tie!!`);
+        scoreDisplay.textContent = "It's a tie"
     } else if (humanChoice == 'rock' && computerChoice == 'paper') {
         computerScore++;
-        console.log(`Computer wins this round!`);
-        console.log(`Computer Choice: ${computerChoice} Computer Score: ${computerScore}`);
-        console.log(`Your Choice: ${humanChoice} Your Score: ${humanScore}`);
+        scoreDisplay.innerText = '';
+        scoreDisplay.innerText = `Computer wins this round!\nComputer Choice: ${computerChoice} Computer Score: ${computerScore}\nYour Choice: ${humanChoice} Your Score: ${humanScore}`;
     } else if (humanChoice == 'paper' && computerChoice == 'scissors') {
         computerScore++;
-        console.log(`Computer wins this round!`);
-        console.log(`Computer Choice: ${computerChoice} Computer Score: ${computerScore}`);
-        console.log(`Your Choice: ${humanChoice} Your Score: ${humanScore}`);
+        scoreDisplay.innerText = '';
+        scoreDisplay.innerText = `Computer wins this round!\nComputer Choice: ${computerChoice} Computer Score: ${computerScore}\nYour Choice: ${humanChoice} Your Score: ${humanScore}`;
     } else if (humanChoice == 'scissors' && computerChoice == 'rock') {
         computerScore++;
-        console.log(`Computer wins this round!`);
-        console.log(`Computer Choice: ${computerChoice} Computer Score: ${computerScore}`);
-        console.log(`Your Choice: ${humanChoice} Your Score: ${humanScore}`);
+        scoreDisplay.innerText = '';
+        scoreDisplay.innerText = `Computer wins this round!\nComputer Choice: ${computerChoice} Computer Score: ${computerScore}\nYour Choice: ${humanChoice} Your Score: ${humanScore}`;
     } else {
         humanScore++;
-        console.log(`Human wins this round!`);
-        console.log(`Your Choice: ${humanChoice} Your Score: ${humanScore}`);
-        console.log(`Computer Choice: ${computerChoice} Computer Score: ${computerScore}`);
+        scoreDisplay.innerText = '';
+        scoreDisplay.innerText = `Human wins this round!\nYour Choice: ${humanChoice} Your Score: ${humanScore}\nComputer Choice: ${computerChoice} Computer Score: ${computerScore}`;
+    }
+
+    if (computerScore == 5) {
+        scoreDisplay.innerText = 'Computer is the winner!'
+        buttons.forEach ((button) => button.disabled = true)
+    } else if (humanScore == 5) {
+        scoreDisplay.innerText = 'Human is the winner!'
+        buttons.forEach ((button) => button.disabled = true)
     }
 }
 
