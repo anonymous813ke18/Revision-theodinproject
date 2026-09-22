@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(62, 142, 221);
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:rgb(91, 157, 222);
+}
+
+button:active {
+    background-color:rgb(62, 142, 221);
+}
