@@ -33,3 +33,14 @@ button:hover {
 button:active {
     background-color:rgb(62, 142, 221);
 }
+
+.eas-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 900px;
+    width: 900px;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
