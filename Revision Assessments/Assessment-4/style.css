@@ -14,6 +14,22 @@ input {
     padding: 5px;
     border-radius: 5px;
     outline: none;
+    width: 34ch;
+}
+
+input:not(:placeholder-shown):valid {
+    border: none;
+    outline: 2px solid green;
+}
+
+input:not(:placeholder-shown):invalid {
+    border: none;
+    outline: 2px solid red;
+}
+
+input:not(:placeholder-shown):focus {
+    border: none;
+    outline: 2px solid goldenrod;
 }
 
 button {
@@ -36,11 +52,21 @@ button:active {
 
 .eas-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     height: 900px;
     width: 900px;
     margin-top: 10px;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.eas-grid-row {
+    flex: 1;
+    display: flex;
+}
+
+.eas-box {
+    flex: 1;
+    border: 1px solid lightgray;
 }
