@@ -1,0 +1,204 @@
+:root {
+    --blue-bg-color: #3575ca;
+    --btn-transition: 100ms ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.library-header {
+    background-color: var(--blue-bg-color);
+    padding: 10px;
+    color: goldenrod;
+}
+
+.library-header h1 {
+    margin: 20px;
+}
+
+.library-header > button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: var(--blue-bg-color);
+    color: white;
+}
+
+.library-header > button:hover {
+    background-color: white;
+    color: var(--blue-bg-color);
+    cursor: pointer;
+}
+
+.library-header > button:active {
+    background-color: var(--blue-bg-color);
+    color: white;
+    transition: 100ms ease-in-out;
+}
+
+.book-dialog {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 90%;
+
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+}
+
+.close-btn > svg {
+    color: var(--blue-bg-color);
+    width: 20px;
+    height: 20px;
+}
+
+.close-btn:hover {
+    background-color: var(--blue-bg-color);
+    cursor: pointer;
+}
+
+.close-btn:hover > svg {
+    color: white;
+}
+
+.close-btn:active {
+    background-color: white;
+}
+
+.close-btn:active > svg {
+    color: var(--blue-bg-color);
+}
+
+.book-dialog > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.form-row > input {
+    font-size: 12pt;
+    padding: 2px;
+    width: 25ch;
+}
+
+.form-row > select {
+    width: 25ch;
+    padding: 2px;
+    font-size: 12pt;
+    background-color: white;
+    border: none;
+}
+
+.add-btn {
+    flex: 1;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: white;
+    color: var(--blue-bg-color);
+}
+
+.add-btn:hover {
+    background-color: var(--blue-bg-color);
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn:active {
+    background-color: white;
+    color: var(--blue-bg-color);
+    transition: var(--btn-transition);
+}
+
+.error-msg {
+    font-size: 10pt;
+    letter-spacing: 0.5px;
+    color: red;
+}
+
+.book-dialog::backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.5fr));
+    align-items: start;    
+    gap: 20px;
+
+    padding: 20px 10px;
+}
+
+.book-card {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-row-gap: 5px;
+
+    font-size: 12pt;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 2px gray;
+    border-radius: 10px;
+    border-left: 10px solid rgb(255, 213, 0);
+}
+
+.read {
+    border-left: 10px solid rgb(123, 197, 54);
+}
+
+.book-card-btn-container {
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.book-card-btn-container > button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--blue-bg-color);
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.book-card-btn-container > button:hover {
+    background-color: var(--blue-bg-color);
+    color: white;
+    cursor: pointer;
+}
+
+.book-card-btn-container > button:active {
+    background-color: white;
+    color: var(--blue-bg-color);
+    transition: var(--btn-transition);
+}
