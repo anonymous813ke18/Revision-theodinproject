@@ -31,11 +31,15 @@ class Book {
         this.pages = pages;
         this.status = status;
     }
+
+    addBookToLibrary() {
+        myLibrary.push(this);
+    }
 }
 
-function addBookToLibrary(title, author, pages, status) {
-    myLibrary.push(new Book(crypto.randomUUID(), title, author, pages, status));
-}
+// function addBookToLibrary(title, author, pages, status) {
+//     myLibrary.push(new Book(crypto.randomUUID(), title, author, pages, status));
+// }
 
 function displayLibrary() {
     bookGrid.replaceChildren();
@@ -105,7 +109,6 @@ closeDialog.addEventListener('click', () => bookDialog.close())
 
 addBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(Number(bookPages.value))
 
     if (bookTitle.value == '') {
         errorMsg.textContent = 'Please enter the title!';
@@ -123,7 +126,9 @@ addBtn.addEventListener('click', (e) => {
         return;
     }
 
-    addBookToLibrary(bookTitle.value, bookAuthor.value, bookPages.value, bookStatus.value);
+    // addBookToLibrary(bookTitle.value, bookAuthor.value, bookPages.value, bookStatus.value);
+    const newBook = new Book(crypto.randomUUID(), bookTitle.value, bookAuthor.value, bookPages.value, bookStatus.value);
+    newBook.addBookToLibrary();
     displayLibrary();
     bookTitle.focus();
     errorMsg.textContent = '';
