@@ -12,15 +12,25 @@ const bookPages = document.querySelector('#book-pages');
 const bookStatus = document.querySelector('#book-status');
 const errorMsg = document.querySelector('.error-msg');
 
-function Book (id, title, author, pages, status) {
-    if(!new.target)
-        throw Error("You must use the 'new' operator to call the constructor");
+// function Book (id, title, author, pages, status) {
+//     if(!new.target)
+//         throw Error("You must use the 'new' operator to call the constructor");
 
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status
+//     this.id = id;
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.status = status
+// }
+
+class Book {
+    constructor(id, title, author, pages, status) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
 }
 
 function addBookToLibrary(title, author, pages, status) {
